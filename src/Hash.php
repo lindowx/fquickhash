@@ -7,7 +7,7 @@ use Psr\Log\LoggerInterface;
 class Hash
 {
     const MIN_FILE_SIZE = 8388608;
-    const MEDIA_SAMPLE_SIZE = 8192;
+    const MEDIA_SAMPLE_SIZE = 8912;
     const SAMPLE_SIZE = 4096;
     const MAX_SAMPLE_TIMES = 1024;
 
