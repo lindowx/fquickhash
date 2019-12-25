@@ -4,7 +4,7 @@
     "type": "library",
     "keywords": ["PHP", "Hash", "File", "MD5", "SHA1"],
     "require": {
-        "php": "^5.6",
+        "php": ">=5.6",
         "psr/log": "^1.1"
     },
     "license": "MIT",
