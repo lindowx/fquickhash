@@ -12,18 +12,13 @@ class FFmpeg
     protected static function detectBinPath($binary)
     {
         if (! self::$binDir) {
-            switch (strtolower(PHP_OS_FAMILY)) {
-                case 'linux':
-                    self::$binDir = __DIR__ . '/../ffmpeg/linux';
-                    break;
-
-                case 'windows':
-                    self::$binDir = __DIR__ . '/../ffmpeg/windows';
-                    break;
-
-                default:
-                    throw new HashException('Operating system is not supported');
-                    break;
+            $os = strtolower(php_uname('s'));
+            if (strpos($os, 'linux') !== false) {
+                self::$binDir = __DIR__ . '/../ffmpeg/linux';
+            } else if (strpos($os, 'windows') !== false) {
+                self::$binDir = __DIR__ . '/../ffmpeg/windows';
+            } else {
+                throw new HashException('Operating system is not supported');
             }
 
             switch (PHP_INT_SIZE) {
