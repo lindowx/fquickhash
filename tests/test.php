@@ -143,8 +143,7 @@ $file_1 = '/mnt/i/karaoke_transcode/01-【歌手分类】/歌手01--数字开头
 $file_2 = '/mnt/dsm_usb/src-20190927/learn/course-covers/9000万人的使命.png';
 //$file_1 = 'i:\\karaoke_transcode/01-【歌手分类】/歌手01--数字开头/183CLUB/183CLUB-再一遍(MTV)-国语-流行歌曲.mp4';
 
-//$hashCalc = new \Lindowx\FQuickHash\Hash();
-//$hashCalc->setLogger(new TestLogger());
-//
-//$hash = $hashCalc->getHash($file_1);
-//var_dump($hash);
+$hashCalc = new \Lindowx\FQuickHash\Hash();
+$hashCalc->setLogger(new TestLogger());
+$hash = $hashCalc->getHash($file_1);
+var_dump($hash);
